@@ -21,7 +21,7 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-       // val Firstname = findViewById<Spinner>(R.id.spinner)
+     val Firstname = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
         val Lastname = findViewById<EditText>(R.id.lastName)
         val Email = findViewById<EditText>(R.id.userEmail)
         val Password = findViewById<EditText>(R.id.password)
@@ -58,7 +58,7 @@ class MainActivity2 : AppCompatActivity() {
         //button
         val confirm = findViewById<Button>(R.id.ConfirmBtn)
         confirm .setOnClickListener {
-           // Firstname.text.toString().trim().toInt()
+            preferences.edit().putString("Firstname",   Firstname.text.toString().trim()).apply()
             preferences.edit().putString("Lastname",  Lastname.text.toString().trim()).apply()
             preferences.edit().putString("Email",  Email.text.toString().trim()).apply()
             preferences.edit().putString("Password",  Password.text.toString().trim()).apply()
@@ -96,7 +96,7 @@ class MainActivity2 : AppCompatActivity() {
         val adapter: ArrayAdapter<String> =
             ArrayAdapter<String>(this, android.R.layout.select_dialog_item, Education)
         val actv = findViewById<View>(R.id.autoCompleteTextView) as AutoCompleteTextView
-        actv.threshold = 1
+
         actv.setAdapter(adapter)
         actv.setTextColor(Color.RED)
     }

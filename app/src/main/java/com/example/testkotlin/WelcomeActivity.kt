@@ -18,8 +18,10 @@ class WelcomeActivity : AppCompatActivity() {
         output = findViewById(R.id.output)
         sharedPref=  getSharedPreferences("taskandroid", Context.MODE_PRIVATE)
         output.text= "Last name:"+" "+sharedPref.getString("Lastname","0").toString()+ "\n"+
+                "First name:"+" "+sharedPref.getString("Firstname","0").toString()+ "\n"+
         "Email:"+" "+sharedPref.getString("Email","0").toString()+ "\n"+
-        "Password:"+" "+sharedPref.getString("Password","0").toString()+ "\n"
+        "Password:"+" "+sharedPref.getString("Password","0").toString()+ "\n"+
+                "Education:"+" "+sharedPref.getString("Education","0").toString()+ "\n"
 
 
     }
