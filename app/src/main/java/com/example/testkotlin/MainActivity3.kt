@@ -1,6 +1,8 @@
 package com.example.testkotlin
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,6 +14,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import java.util.Calendar
 
+
 class MainActivity3 : AppCompatActivity() {
 //    lateinit var drawerLayout: DrawerLayout
 //    lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
@@ -20,17 +23,20 @@ lateinit var input: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
+   val preferences: SharedPreferences =
+            this.getSharedPreferences("taskandroid", Context.MODE_PRIVATE)
+
         ok = findViewById(R.id.ok)
         input = findViewById(R.id.input)
         ok.setOnClickListener {
-            val currentDate = Calendar.getInstance().get(Calendar.YEAR);
+            val currentDate = Calendar.getInstance().get(Calendar.YEAR)
             if (input.text.equals(null)||input.text.isEmpty()){
                 Toast.makeText(this, "error input! ", Toast.LENGTH_SHORT).show()
             }else{
                 val res = currentDate - input.text.toString().trim().toInt()
-
+                preferences.edit().putInt("years", res).apply()
                 val i = Intent(this,MainActivity4::class.java)
-                i.putExtra("Age",res.toString())
+               // i.putExtra("Age",res.toString())
                 startActivity(i)
             }
 
