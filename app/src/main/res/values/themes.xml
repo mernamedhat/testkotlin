@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.TestKotlin" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.TestKotlin" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <item name="colorPrimary">#FF8C00</item>
 
     <item name="colorPrimaryVariant">@color/black</item>
