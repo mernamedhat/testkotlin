@@ -57,6 +57,6 @@ class BottomNavActivity : AppCompatActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container,fragment)
         transaction.commit()
-        ////margo
+
     }
     }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CartFragment">
+    <!-- MainFragment -->
+    <fragment
+        android:id="@+id/CartFragment"
+        android:name="com.example.testkotlin.navigation.CartFragment"
+        android:label="fragment_view_balance"
+        tools:layout="@layout/fragment_cart">
+        <argument
+            android:name="myStringArgument"
+            app:argType="string" />
+        <action
+            android:id="@+id/fragment_cart_to_Category"
+            app:destination="@id/CategoryFragmentd"
+         />
+        <action
+            android:id="@+id/fragment_cart_to_Profile"
+            app:destination="@id/ProfileFragment"
+         />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/CategoryFragmentd"
+        android:name="com.example.testkotlin.navigation.CategoryFragment"
+        android:label="fragment_view_balance"
+        tools:layout="@layout/fragment_category">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.testkotlin.navigation.ProfileFragment"
+        android:label="fragment_view_balance"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+
+
+
+</navigation>
