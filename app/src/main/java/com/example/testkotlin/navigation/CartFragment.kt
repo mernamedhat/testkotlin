@@ -29,7 +29,7 @@ class CartFragment : Fragment() {
 
         val Cate=view.findViewById<Button>(R.id.Cate)
         Cate.setOnClickListener {
-            val action = CartFragmentDirections.fragmentCartToCategory("Your string here")
+            val action = CartFragmentDirections.fragmentCartToCategory("ggg")
             navController.navigate(action)
 
             }
