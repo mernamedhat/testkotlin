@@ -29,8 +29,8 @@ class CartFragment : Fragment() {
 
         val Cate=view.findViewById<Button>(R.id.Cate)
         Cate.setOnClickListener {
-            val action = CartFragmentDirections.fragmentCartToCategory("Your string here")
-            navController.navigate(action)
+//            val action = CartFragmentDirections.fragmentCartToCategory("Your string here")
+//            navController.navigate(action)
 
             }
        // findNavController().navigate(CartFragmentDirections.())
