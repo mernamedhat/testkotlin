@@ -5,10 +5,50 @@
     android:layout_height="match_parent"
     tools:context=".navigation.CategoryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/categorytext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Category"
+            android:textStyle="bold"
+
+            android:textColor="#BB9457"
+            android:textSize="30sp" />
+
+
+
+        <Button
+            android:id="@+id/cart"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:text="Move to cart"
+            android:textColor="@color/black"
+            />
+        <Button
+            android:id="@+id/Prof"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:text="Move to Prof"
+
+            android:textColor="@color/black"
+            />
+
+
+
+
+    </LinearLayout>
 
 </FrameLayout>

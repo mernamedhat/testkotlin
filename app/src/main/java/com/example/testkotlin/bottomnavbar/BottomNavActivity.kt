@@ -31,27 +31,27 @@ class BottomNavActivity : AppCompatActivity() {
 //        }
         loadFragment(HomeFragment())
         bottomNav = findViewById(R.id.bottomNav) as BottomNavigationView
-        bottomNav.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.homeFragment -> {
-                    loadFragment(HomeFragment())
-                    true
-                }
-                R.id.searchFragment -> {
-                    loadFragment(SearchFragment())
-                    true
-                }
-                R.id.favouriteFragment -> {
-                    loadFragment(FavoriteFragment())
-                    true
-                }
-
-
-                else -> {
-                   true
-                }
-            }
-        }
+//        bottomNav.setOnItemSelectedListener {
+//            when (it.itemId) {
+//                R.id.homeFragment -> {
+//                    loadFragment(HomeFragment())
+//                    true
+//                }
+//                R.id.searchFragment -> {
+//                    loadFragment(SearchFragment())
+//                    true
+//                }
+//                R.id.favouriteFragment -> {
+//                    loadFragment(FavoriteFragment())
+//                    true
+//                }
+//
+//
+//                else -> {
+//                   true
+//                }
+//            }
+//        }
     }
     private  fun loadFragment(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()

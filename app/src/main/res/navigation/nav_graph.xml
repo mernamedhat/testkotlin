@@ -3,16 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
+    app:nullable="true"
     app:startDestination="@id/CartFragment">
     <!-- MainFragment -->
     <fragment
         android:id="@+id/CartFragment"
         android:name="com.example.testkotlin.navigation.CartFragment"
         android:label="fragment_view_balance"
+        app:nullable="true"
         tools:layout="@layout/fragment_cart">
         <argument
             android:name="myStringArgument"
-            app:argType="string" />
+            app:argType="string"
+            app:nullable="true"
+            />
         <action
             android:id="@+id/fragment_cart_to_Category"
             app:destination="@id/CategoryFragmentd"
@@ -28,7 +32,18 @@
         android:id="@+id/CategoryFragmentd"
         android:name="com.example.testkotlin.navigation.CategoryFragment"
         android:label="fragment_view_balance"
+        app:nullable="true"
         tools:layout="@layout/fragment_category">
+        <argument
+            android:name="Argument"
+            app:argType="string"
+            app:nullable="true"
+           />
+
+        <action
+            android:id="@+id/fragment_category_to_cart"
+            app:destination="@id/CartFragment"
+            />
 
 
     </fragment>
