@@ -3,27 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/CartFragment"
-        android:title="Cart"
+        android:enabled="true"
         android:iconTint="@color/white"
 
-        
-        android:enabled="true"
-        />
+
+        android:title="Cart" />
 
     <item
         android:id="@+id/CategoryFragmentd"
-        android:title="Category"
-
-        android:iconTint="@color/white"
         android:enabled="true"
-        />
+        android:iconTint="@color/white"
+        android:title="Category" />
     <item
         android:id="@+id/ProfileFragment"
-        android:title="Profile"
+        android:enabled="true"
 
         android:iconTint="@color/white"
-        android:enabled="true"
-        />
+        android:title="Profile" />
 
 
 </menu>
