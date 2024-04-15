@@ -23,8 +23,8 @@ lateinit var input: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
-   val preferences: SharedPreferences =
-            this.getSharedPreferences("taskandroid", Context.MODE_PRIVATE)
+//   val preferences: SharedPreferences =
+//            this.getSharedPreferences("taskandroid", Context.MODE_PRIVATE)
 
         ok = findViewById(R.id.ok)
         input = findViewById(R.id.input)
@@ -33,10 +33,10 @@ lateinit var input: EditText
             if (input.text.equals(null)||input.text.isEmpty()){
                 Toast.makeText(this, "error input! ", Toast.LENGTH_SHORT).show()
             }else{
-                val res = currentDate - input.text.toString().trim().toInt()
-                preferences.edit().putInt("years", res).apply()
+            val res = currentDate - input.text.toString().trim().toInt()
+//                preferences.edit().putInt("years", res).apply()
                 val i = Intent(this,MainActivity4::class.java)
-               // i.putExtra("Age",res.toString())
+                i.putExtra("Age",res.toString())
                 startActivity(i)
             }
 

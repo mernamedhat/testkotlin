@@ -20,13 +20,13 @@ class MainActivity4 : AppCompatActivity() {
         setContentView(R.layout.activity_main4)
         back = findViewById(R.id.back)
         output = findViewById(R.id.output)
-        sharedPref=  getSharedPreferences("taskandroid", Context.MODE_PRIVATE)
+//        sharedPref=  getSharedPreferences("taskandroid", Context.MODE_PRIVATE)
 
         back.setOnClickListener { finish() }
 
-//        val i = intent
-//        val result = i.getStringExtra("Age")
-       // output.text=result.toString()
-        output.text= sharedPref.getInt("years",0).toString()
+        val i = intent
+        val result = i.getStringExtra("Age")
+        output.text=result.toString()
+//        output.text= sharedPref.getInt("years",0).toString()
     }
 }
